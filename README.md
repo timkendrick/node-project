@@ -3,19 +3,19 @@
 > Configuration files for Node projects
 
 
-# Overview
+## Overview
 
 A collection of opinionated defaults that ensure consistent, versioned configuration settings across projects.
 
 
-# Installation
+## Installation
 
 ```bash
 npm install @timkendrick/node-project
 ```
 
 
-# Usage
+## Usage
 
 Add symbolic links to the required files, as follows:
 
