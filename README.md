@@ -1,4 +1,6 @@
 # @timkendrick/node-project
+[![npm version](https://img.shields.io/npm/v/@timkendrick/node-project.svg)](https://www.npmjs.com/package/@timkendrick/node-project)
+![Stability](https://img.shields.io/badge/stability-stable-brightgreen.svg)
 
 > Configuration files for Node projects
 
