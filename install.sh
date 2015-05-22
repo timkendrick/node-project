@@ -1,0 +1,33 @@
+CONFIG_PATH=$PWD
+EDITORCONFIG_PATH=.editorconfig
+ESLINTRC_PATH=.eslintrc
+GIT_PATH=.git
+GIT_HOOK_PATH=$GIT_PATH/hooks/pre-push
+
+cd ../../..
+
+RELATIVE_CONFIG_PATH=${CONFIG_PATH:${#PWD}+1}
+
+if [ ! -e $EDITORCONFIG_PATH ] && [ ! -h $EDITORCONFIG_PATH ];
+then
+	ln -s $RELATIVE_CONFIG_PATH/editorconfig $EDITORCONFIG_PATH
+	echo "Created symlink: $EDITORCONFIG_PATH > $RELATIVE_CONFIG_PATH/editorconfig"
+fi
+
+if [ ! -e $ESLINTRC_PATH ] && [ ! -h $ESLINTRC_PATH ];
+then
+	ln -s $RELATIVE_CONFIG_PATH/eslintrc $ESLINTRC_PATH
+	echo "Created symlink: $ESLINTRC_PATH > $RELATIVE_CONFIG_PATH/eslintrc"
+fi
+
+if [ ! -e $GIT_PATH ];
+then
+	git init
+fi
+
+if [ ! -e $GIT_HOOK_PATH ] && [ ! -h $GIT_HOOK_PATH ];
+then
+	RELATIVE_GIT_HOOK_PATH="../../$RELATIVE_CONFIG_PATH/git-hooks/pre-push"
+	ln -s $RELATIVE_GIT_HOOK_PATH $GIT_HOOK_PATH
+	echo "Created symlink: $GIT_HOOK_PATH > $RELATIVE_GIT_HOOK_PATH"
+fi

@@ -2,6 +2,9 @@
   "name": "@timkendrick/node-project",
   "version": "1.0.0",
   "description": "Configuration files for Node projects",
+  "scripts": {
+    "postinstall": "./install.sh"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/timkendrick/node-project.git"
