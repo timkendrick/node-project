@@ -8,7 +8,7 @@
 ## Installation
 
 ```bash
-npm install @timkendrick/node-project
+npm install @timkendrick/node-project --save-dev
 ```
 
 
