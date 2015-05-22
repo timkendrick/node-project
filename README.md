@@ -1,4 +1,4 @@
-# node-project
+# @timkendrick/node-project
 
 > Configuration files for Node projects
 
