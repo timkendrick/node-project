@@ -3,11 +3,6 @@
 > Configuration files for Node projects
 
 
-## Overview
-
-A collection of opinionated defaults that ensure consistent, versioned configuration settings across projects.
-
-
 ## Installation
 
 ```bash
@@ -15,14 +10,15 @@ npm install @timkendrick/node-project
 ```
 
 
-## Usage
+## Overview
 
-Add symbolic links to the required files, as follows:
+A collection of opinionated defaults that ensure consistent, versioned configuration settings across projects.
 
-```bash
-CONFIG_PATH=node_modules/@timkendrick/node-project
 
-ln -s $CONFIG_PATH/.editorconfig .editorconfig
-ln -s $CONFIG_PATH/.eslintrc .eslintrc
-ln -s ../../$CONFIG_PATH/git-hooks/pre-push .git/hooks/pre-push
-```
+## Included files
+
+This package creates symbolic links for the following files, if they do not already exist:
+
+- `.editorconfig`: [EditorConfig](http://editorconfig.org/) configuration
+- `.eslintrc`: [ESLint](http://eslint.org/) configuration
+- `.git/hooks/pre-push`: Git pre-push hook that runs `npm test` before pushing
