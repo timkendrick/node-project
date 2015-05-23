@@ -3,7 +3,7 @@
   "version": "1.0.1",
   "description": "Configuration files for Node projects",
   "scripts": {
-    "postinstall": "./install.sh"
+    "postinstall": "./install"
   },
   "repository": {
     "type": "git",

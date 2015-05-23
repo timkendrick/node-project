@@ -1,3 +1,5 @@
+#!/bin/bash
+
 CONFIG_PATH=$PWD
 EDITORCONFIG_PATH=.editorconfig
 ESLINTRC_PATH=.eslintrc
