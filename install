@@ -25,13 +25,6 @@ then
 	echo "Added $GITIGNORE_PATH to $GITIGNORE_PATH"
 fi
 
-if [ ! -e $GIT_HOOK_PATH ] && [ ! -h $GIT_HOOK_PATH ];
-then
-	RELATIVE_GIT_HOOK_PATH="../../$RELATIVE_CONFIG_PATH/git-hooks/pre-push"
-	ln -s $RELATIVE_GIT_HOOK_PATH $GIT_HOOK_PATH
-	echo "Created symlink: $GIT_HOOK_PATH > $RELATIVE_GIT_HOOK_PATH"
-fi
-
 if [ ! -e $EDITORCONFIG_PATH ] && [ ! -h $EDITORCONFIG_PATH ];
 then
 	ln -s $RELATIVE_CONFIG_PATH/editorconfig $EDITORCONFIG_PATH
@@ -54,4 +47,11 @@ then
 		echo "/$ESLINTRC_PATH" >> $GITIGNORE_PATH
 		echo "Added $ESLINTRC_PATH to $GITIGNORE_PATH"
 	fi
+fi
+
+if [ ! -e $GIT_HOOK_PATH ] && [ ! -h $GIT_HOOK_PATH ];
+then
+	RELATIVE_GIT_HOOK_PATH="../../$RELATIVE_CONFIG_PATH/git-hooks/pre-push"
+	ln -s $RELATIVE_GIT_HOOK_PATH $GIT_HOOK_PATH
+	echo "Created symlink: $GIT_HOOK_PATH > $RELATIVE_GIT_HOOK_PATH"
 fi
