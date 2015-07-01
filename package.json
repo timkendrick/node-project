@@ -1,6 +1,6 @@
 {
   "name": "@timkendrick/node-project",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Configuration files for Node projects",
   "scripts": {
     "postinstall": "./install"
